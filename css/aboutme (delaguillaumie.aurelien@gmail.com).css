@@ -1,0 +1,402 @@
+html {
+    background-color: #000;
+}
+
+body, h1, p {
+  margin: 0;
+}
+
+html,
+footer,
+header,
+main,
+menu,
+nav,
+section{
+  display: block;
+}
+
+html,
+body{
+    height: 100%;
+}
+
+@font-face {
+    font-family: starjedi;
+    src: url("../images/star_jedi/starjedi/Starjhol.ttf");
+    font-weight: normal;
+}
+
+
+
+
+/* ##########################################
+            SECTION: Banner Home  
+########################################## */
+header {
+    width: 100%;
+    height: 20%;
+    background-image: url('../images/star-background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: table;
+    z-index: 3;
+}
+
+div#tabletitle {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+header h1{
+    font-family: starjedi;
+    color: #ffe81f;
+    font-size: 4rem;
+    margin:0 auto;
+    text-align: center;
+    z-index: -1;
+}
+
+
+
+
+/* ##########################################
+            SECTION: Nav Bar 
+########################################## */
+
+nav {
+    width: 100%;
+    height: 10%;
+    background-color: rgb(0,0,0);
+}
+
+.sticky {
+    position: fixed;
+    left: 0;
+    top: 0;
+    border-top: 0;
+}
+
+.navWrapper {
+    position: relative;
+    width: 100%;
+    height: 60px;
+    background-color: #0E0E0E;
+    z-index: 3;
+    border-bottom: 1px solid #3C3C3C;
+}
+
+/********* Home Buttom section on nav ***********/
+
+.homebuttonwrapper {
+    position: fixed;
+    z-index: 1000;
+}
+
+/*Homebutton is hidden */
+
+.homebutton {
+    float: left;
+    border-left: 0px solid #ffe81f;
+    border-bottom: 60px solid #ffe81f;
+    border-right: 0px solid transparent;
+}
+
+img.logo {
+    display: none;
+}
+
+
+/*********** nav Menu ***********/
+
+.navbutton {
+    height: 60px;
+    /*display: flex;*/
+}
+
+.navbutton ul {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    display: table;
+    height: 60px;
+    border-right: 1px solid #3C3C3C;
+}
+
+.alignul{
+    margin: 0 auto;
+    padding: 0;
+    height: 60px;
+}
+
+
+.navbutton ul > li {
+    width: 130px;
+    border-left: 1px solid #3C3C3C;
+    height: 60px;
+    position: relative;
+    display: table-cell;
+
+    transition:  background-color 0.6s ease;
+    -moz-transition:  background-color 0.6s ease;
+    -webkit-transition:  background-color 0.6s ease;
+}
+
+.navbutton ul > li:hover {
+    background-color: #1B1B1B;
+
+    transition:  background-color 0.6s ease;
+    -moz-transition:  background-color 0.6s ease;
+    -webkit-transition:  background-color 0.6s ease;
+}
+
+li#active{
+     text-shadow: 0px 0px 7px #0000FF;
+
+    -webkit-animation-name: textcolorchange;  
+    -webkit-animation-iteration-count: infinite;  
+    -webkit-animation-duration: 40s;
+}
+
+@-webkit-keyframes textcolorchange {  
+  0% { text-shadow: 0px 0px 7px #0000FF; }
+  16% { text-shadow: 0px 0px 7px #00FFFF; }
+  33% { text-shadow: 0px 0px 7px #00FF00; }
+  50%{ text-shadow: 0px 0px 7px #FFFF00;}
+  66% { text-shadow: 0px 0px 7px #FF0000; }
+  80% { text-shadow: 0px 0px 7px #FF00ff; }
+  100% { text-shadow: 0px 0px 7px #0000FF; }
+}
+
+.navbutton li > img {
+    height: 23px;
+    padding-top: 5px;
+}
+
+.navbutton a {
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    height: 60px;
+}
+
+
+.navbutton a > img {
+    height: 23px;
+    padding-top: 5px;
+}
+
+
+.navbutton span {
+    margin-top: -1px;
+    display:block;
+    color:#fff;
+    font-family: 'Droid Sans', sans-serif;
+    font-size: 1rem;
+}
+
+.navbutton a[href*=index]:hover {
+    text-decoration:none;
+    text-shadow: 0px 0px 7px #FF00FF;
+}
+
+.navbutton a[href*=movies]:hover {
+    text-decoration:none;
+    text-shadow: 0px 0px 7px #FFFF00;
+}
+
+.navbutton a[href*=characters]:hover {
+    text-decoration:none;
+    text-shadow: 0px 0px 7px #FF0000;
+}
+
+.navbutton a[href*=location]:hover {
+    text-decoration:none;
+    text-shadow: 0px 0px 7px  #00FFFF;
+}
+
+.navbutton a[href*=bio]:hover {
+    text-decoration:none;
+    text-shadow: 0px 0px 7px #00FF00;
+}
+
+.navbutton a[href*=indiana]:hover {
+    text-decoration:none;
+    text-shadow: 0px 0px 7px #FFFF00;  
+}
+
+.navbutton a[href*=aboutme]:hover {
+    text-decoration:none;
+    text-shadow: 0px 0px 7px #0000FF;
+}
+
+
+
+
+div.saberlight{
+    height: 1px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.6);
+    box-shadow: #FF0000 0px 0px 6px 2px;
+    position: relative;
+    display: block;
+    -webkit-animation-name: colorchange;  
+    -webkit-animation-iteration-count: infinite;  
+    -webkit-animation-duration: 40s;
+    z-index: 4;
+
+}
+
+@-webkit-keyframes colorchange {  
+  0% { box-shadow: #0000FF 0px 0px 6px 2px; }
+  16% { box-shadow: #00FFFF 0px 0px 6px 2px; }
+  33% { box-shadow: #00FF00 0px 0px 6px 2px; }
+  50%{ box-shadow: #FFFF00 0px 0px 6px 2px;}
+  66% { box-shadow: #FF0000 0px 0px 6px 2px; }
+  80% { box-shadow: #FF00ff 0px 0px 6px 2px; }
+  100% { box-shadow: #0000FF 0px 0px 6px 2px; }
+}
+
+/* ##########################################
+            SECTION: Page content
+########################################## */
+
+.content {
+    width: 100%;
+    height: 70%;
+    background-color: rgb(0,0,0);
+    
+}
+
+div#center{
+    margin: 0 auto;
+    display: table;
+}
+
+div#contentwrapper{
+    display: table-cell;
+    vertical-align: middle;
+    margin-top: 50px;
+    width: 900px;
+    height: 440px;
+    margin: 0 auto;
+    background-image: url('../images/self-strooparised.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+section{
+    width: 900px;
+    padding-bottom: 20px;
+}
+
+section > h1, h2, p{
+    color:#fff;
+    font-family: 'Droid Sans', sans-serif;
+}
+
+
+section > h1 {
+    padding-top: 30px;
+    font-size: 30pt;
+}
+
+section > h2 {
+    margin: 0px 10px;
+}
+
+h2.subtitle {
+    font-size: 20pt;
+}
+
+section > p {
+    font-size: 1rem;
+    line-height: 18pt;
+}
+
+.spacer{
+    display:block;
+    float:left;
+    clear:left;
+    margin: 0;
+}
+
+
+/*mobile CSS */
+
+.burger_menu{
+    display:none;
+}
+
+.burger_menu_sticky {
+    display:none;
+}
+
+@media screen and (max-width: 700px){
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .navbutton ul > li {
+        border-left: 1px solid #3C3C3C;
+        border-right: 1px solid #3C3C3C;
+        border-bottom: 1px solid #3C3C3C;
+        width: 250px;
+        display: block;
+        background-color: #0E0E0E;
+        position: relative;
+        left:-252px;
+    }
+
+    .navbutton ul {
+        margin: 0;
+        border-right: 0px solid #3C3C3C;
+        display: block;
+    }
+
+    .burger_menu {
+        background-image: url('../images/burger-menu.png');
+        background-size: 40px;
+        width: 250px;
+        height: 61px;
+        background-repeat: no-repeat;
+        display: block;
+        top: 15px;
+        left: 15px;
+        position: relative;
+        z-index: 1000;
+    }
+
+        .navbutton a {
+            display: block;
+            text-align: left;
+        }
+
+        .navbutton a > img {
+            display: inline-block;
+            height: 30px;
+            padding: 15px 40px;
+        }
+
+        .navbutton a > span {
+            display: inline-block;
+            position: relative;
+            top: -23px;
+        }
+
+        section {
+            width: 80%;
+            padding-bottom: 20px;
+            margin: 0 auto;
+        }
+        
+        div#contentwrapper {
+                background-image: none; 
+        }
+
+        .spacer {
+            display: none;
+        }
+}
+

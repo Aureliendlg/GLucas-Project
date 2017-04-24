@@ -1,0 +1,585 @@
+html {
+    background-color: #000;
+}
+
+body, h1, p {
+  margin: 0;
+}
+
+html,
+footer,
+header,
+main,
+menu,
+nav,
+section{
+  display: block;
+}
+
+html,
+body{
+    height: 100%;
+}
+
+@font-face {
+    font-family: starjedi;
+    src: url("../images/star_jedi/starjedi/Starjhol.ttf");
+    font-weight: normal;
+}
+
+
+
+
+/* ##########################################
+            SECTION: Banner Home  
+########################################## */
+header {
+    width: 100%;
+    height: 20%;
+    background-image: url('../images/star-background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: table;
+    z-index: 3;
+}
+
+div#tabletitle {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+header h1{
+    font-family: starjedi;
+    color: #ffe81f;
+    font-size: 4rem;
+    margin:0 auto;
+    text-align: center;
+    z-index: -1;
+}
+
+
+
+
+/* ##########################################
+            SECTION: Nav Bar 
+########################################## */
+
+nav {
+    width: 100%;
+    height: 10%;
+    background-color: rgb(0,0,0);
+}
+
+.sticky {
+    position: fixed;
+    left: 0;
+    top: 0;
+    border-top: 0;
+}
+
+.navWrapper {
+    position: relative;
+    width: 100%;
+    height: 60px;
+    background-color: #0E0E0E;
+    z-index: 3;
+    border-bottom: 1px solid #3C3C3C;
+}
+
+/********* Home Buttom section on nav ***********/
+
+.homebuttonwrapper {
+    position: fixed;
+    z-index: 1000;
+}
+
+/*
+Homebutton is hidden 
+*/
+.homebutton {
+    float: left;
+    border-left: 0px solid #ffe81f;
+    border-bottom: 60px solid #ffe81f;
+    border-right: 0px solid transparent;
+}
+
+img.logo {
+    display: none;
+}
+
+#bugermenu {
+    display: none;
+}
+
+
+/*********** nav Menu ***********/
+
+.navbutton {
+    height: 60px;
+    /*display: flex;*/
+}
+
+.navbutton ul {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    display: table;
+    height: 60px;
+    border-right: 1px solid #3C3C3C;
+}
+
+.alignul{
+    margin: 0 auto;
+    padding: 0;
+    height: 60px;
+}
+
+
+.navbutton ul > li {
+    width: 130px;
+    border-left: 1px solid #3C3C3C;
+    height: 60px;
+    position: relative;
+    display: table-cell;
+
+    transition:  background-color 0.6s ease;
+    -moz-transition:  background-color 0.6s ease;
+    -webkit-transition:  background-color 0.6s ease;
+}
+
+.navbutton ul > li:hover {
+    background-color: #1B1B1B;
+
+    transition:  background-color 0.6s ease;
+    -moz-transition:  background-color 0.6s ease;
+    -webkit-transition:  background-color 0.6s ease;
+}
+
+.navbutton li > img {
+    height: 23px;
+    padding-top: 5px;
+}
+
+/********** text shadow light animation ************/
+
+
+li#active{
+     text-shadow: 0px 0px 7px #FF00FF;
+
+    -webkit-animation: textcolorchange 40s infinite; 
+    -moz-animation: textcolorchange 40s infinite; 
+    -ms-animation: textcolorchange 40s infinite; 
+    -o-animation: textcolorchange 40s infinite; 
+    animation: textcolorchange 40s infinite;
+}
+
+
+@-webkit-keyframes textcolorchange {  
+  0% { text-shadow: 0px 0px 7px #FF00ff;}
+  16% { text-shadow: 0px 0px 7px #0000FF; }
+  33% { text-shadow: 0px 0px 7px #00FFFF; }
+  50% { text-shadow: 0px 0px 7px #00FF00; }
+  66% { text-shadow: 0px 0px 7px #FFFF00; }
+  83% { text-shadow: 0px 0px 7px #FF0000; }
+  100%{ text-shadow: 0px 0px 7px #FF00ff;}
+}
+
+@-moz-keyframes textcolorchange {  
+  0% { text-shadow: 0px 0px 7px #FF00ff;}
+  16% { text-shadow: 0px 0px 7px #0000FF; }
+  33% { text-shadow: 0px 0px 7px #00FFFF; }
+  50% { text-shadow: 0px 0px 7px #00FF00; }
+  66% { text-shadow: 0px 0px 7px #FFFF00; }
+  83% { text-shadow: 0px 0px 7px #FF0000; }
+  100%{ text-shadow: 0px 0px 7px #FF00ff;}
+}
+
+@-ms-keyframes textcolorchange {  
+  0% { text-shadow: 0px 0px 7px #FF00ff;}
+  16% { text-shadow: 0px 0px 7px #0000FF; }
+  33% { text-shadow: 0px 0px 7px #00FFFF; }
+  50% { text-shadow: 0px 0px 7px #00FF00; }
+  66% { text-shadow: 0px 0px 7px #FFFF00; }
+  83% { text-shadow: 0px 0px 7px #FF0000; }
+  100%{ text-shadow: 0px 0px 7px #FF00ff;}
+}
+
+@-o-keyframes textcolorchange {  
+  0% { text-shadow: 0px 0px 7px #FF00ff;}
+  16% { text-shadow: 0px 0px 7px #0000FF; }
+  33% { text-shadow: 0px 0px 7px #00FFFF; }
+  50% { text-shadow: 0px 0px 7px #00FF00; }
+  66% { text-shadow: 0px 0px 7px #FFFF00; }
+  83% { text-shadow: 0px 0px 7px #FF0000; }
+  100%{ text-shadow: 0px 0px 7px #FF00ff;}
+}
+
+@keyframes textcolorchange {  
+  0% { text-shadow: 0px 0px 7px #FF00ff;}
+  16% { text-shadow: 0px 0px 7px #0000FF; }
+  33% { text-shadow: 0px 0px 7px #00FFFF; }
+  50% { text-shadow: 0px 0px 7px #00FF00; }
+  66% { text-shadow: 0px 0px 7px #FFFF00; }
+  83% { text-shadow: 0px 0px 7px #FF0000; }
+  100%{ text-shadow: 0px 0px 7px #FF00ff;}
+}
+
+.navbutton a {
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    height: 60px;
+}
+
+
+.navbutton a > img {
+    height: 23px;
+    padding-top: 5px;
+}
+
+
+.navbutton span {
+    margin-top: -1px;
+    display:block;
+    color:#fff;
+    font-family: 'Droid Sans', sans-serif;
+    font-size: 1rem;
+}
+
+.navbutton a[href*=index]:hover {
+    text-decoration:none;
+    text-shadow: 0px 0px 7px #FF00FF;
+}
+
+.navbutton a[href*=movies]:hover {
+    text-decoration:none;
+    text-shadow: 0px 0px 7px #FFFF00;
+}
+
+.navbutton a[href*=characters]:hover {
+    text-decoration:none;
+    text-shadow: 0px 0px 7px #FF0000;
+}
+
+.navbutton a[href*=location]:hover {
+    text-decoration:none;
+    text-shadow: 0px 0px 7px  #00FFFF;
+}
+
+.navbutton a[href*=bio]:hover {
+    text-decoration:none;
+    text-shadow: 0px 0px 7px #00FF00;
+}
+
+.navbutton a[href*=indiana]:hover {
+    text-decoration:none;
+    text-shadow: 0px 0px 7px #FFFF00;  
+}
+
+.navbutton a[href*=aboutme]:hover {
+    text-decoration:none;
+    text-shadow: 0px 0px 7px #0000FF;
+}
+
+
+/********** Light Saber light animation ************/
+
+
+div#saberlight{
+    height: 1px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.6);
+    box-shadow: #FF0000 0px 0px 6px 2px;
+    position: relative;
+    display: block;
+    -webkit-animation: colorchange 40s infinite; 
+    -moz-animation: colorchange 40s infinite; 
+    -ms-animation: colorchange 40s infinite; 
+    -o-animation: colorchange 40s infinite; 
+    animation: colorchange 40s infinite; 
+    z-index: 4;
+
+}
+
+@-moz-keyframes colorchange {  
+  0% { box-shadow: #FF00ff 0px 0px 6px 2px;}
+  16% { box-shadow: #0000FF 0px 0px 6px 2px; }
+  33% { box-shadow: #00FFFF 0px 0px 6px 2px; }
+  50% { box-shadow: #00FF00 0px 0px 6px 2px; }
+  66% { box-shadow: #FFFF00 0px 0px 6px 2px; }
+  83% { box-shadow: #FF0000 0px 0px 6px 2px; }
+  100%{ box-shadow: #FF00ff 0px 0px 6px 2px;}
+}
+
+@-webkit-keyframes colorchange {  
+  0% { box-shadow: #FF00ff 0px 0px 6px 2px;}
+  16% { box-shadow: #0000FF 0px 0px 6px 2px; }
+  33% { box-shadow: #00FFFF 0px 0px 6px 2px; }
+  50% { box-shadow: #00FF00 0px 0px 6px 2px; }
+  66% { box-shadow: #FFFF00 0px 0px 6px 2px; }
+  83% { box-shadow: #FF0000 0px 0px 6px 2px; }
+  100%{ box-shadow: #FF00ff 0px 0px 6px 2px;}
+}
+
+@-ms-keyframes colorchange {  
+  0% { box-shadow: #FF00ff 0px 0px 6px 2px;}
+  16% { box-shadow: #0000FF 0px 0px 6px 2px; }
+  33% { box-shadow: #00FFFF 0px 0px 6px 2px; }
+  50% { box-shadow: #00FF00 0px 0px 6px 2px; }
+  66% { box-shadow: #FFFF00 0px 0px 6px 2px; }
+  83% { box-shadow: #FF0000 0px 0px 6px 2px; }
+  100%{ box-shadow: #FF00ff 0px 0px 6px 2px;}
+}
+
+@-o-keyframes colorchange {  
+  0% { box-shadow: #FF00ff 0px 0px 6px 2px;}
+  16% { box-shadow: #0000FF 0px 0px 6px 2px; }
+  33% { box-shadow: #00FFFF 0px 0px 6px 2px; }
+  50% { box-shadow: #00FF00 0px 0px 6px 2px; }
+  66% { box-shadow: #FFFF00 0px 0px 6px 2px; }
+  83% { box-shadow: #FF0000 0px 0px 6px 2px; }
+  100%{ box-shadow: #FF00ff 0px 0px 6px 2px;}
+}
+
+@keyframes colorchange {  
+  0% { box-shadow: #FF00ff 0px 0px 6px 2px;}
+  16% { box-shadow: #0000FF 0px 0px 6px 2px; }
+  33% { box-shadow: #00FFFF 0px 0px 6px 2px; }
+  50% { box-shadow: #00FF00 0px 0px 6px 2px; }
+  66% { box-shadow: #FFFF00 0px 0px 6px 2px; }
+  83% { box-shadow: #FF0000 0px 0px 6px 2px; }
+  100%{ box-shadow: #FF00ff 0px 0px 6px 2px;}
+}
+
+/* ##########################################
+            SECTION: Page content
+########################################## */
+
+/* Openin crawl from  http://blogs.sitepointstatic.com/examples/tech/css3-starwars/index.html */
+
+p#start
+{
+    position: relative;
+    width: 30%;
+    font-size: 200%;
+    font-weight: 400;
+    padding-top: 80px;
+    margin: 0 auto;
+    color: #4ee;
+    opacity: 0;
+    z-index: 1;
+    font-family: 'Droid Sans', sans-serif;
+    -webkit-animation: intro 3s ease-out;
+    -moz-animation: intro 3s ease-out;
+    -ms-animation: intro 3s ease-out;
+    -o-animation: intro 3s ease-out;
+    animation: intro 3s ease-out;
+}
+
+@-webkit-keyframes intro {
+    0% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { opacity: 0;}
+}
+
+@-moz-keyframes intro {
+    0% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { opacity: 0;}
+}
+
+@-ms-keyframes intro {
+    0% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { opacity: 0;}
+}
+
+@-o-keyframes intro {
+    0% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { opacity: 0; 
+ }
+}
+
+@keyframes intro {
+    0% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+
+.content {
+    height: 70%;
+    background-color: rgb(0,0,0);
+}
+
+#starwartext {
+    position: absolute;
+    width: 50%;
+    height: 250%;
+    top: 30%;
+    bottom: 0;
+    left: 50%;
+    margin-left: -25%;
+    font-size: 180%;
+    text-align: justify;
+    overflow: hidden;
+    -webkit-transform-origin: 50% 10%;
+    -moz-transform-origin: 50% 10%;
+    -ms-transform-origin: 50% 10%;
+    -o-transform-origin: 50% 10%;
+     transform-origin:  50% 10%; 
+     -webkit-transform: perspective(200px) rotateX(25deg); 
+    -moz-transform: perspective(200px) rotateX(25deg);
+    -ms-transform: perspective(200px) rotateX(25deg);
+    -o-transform: perspective(200px) rotateX(25deg);
+    transform: perspective(200px) rotateX(25deg);
+}
+
+#starwartext:after
+{
+    position: absolute;
+    content: ' ';
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 90%;
+    background-image: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
+    background-image: -moz-linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
+    background-image: -ms-linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
+    background-image: -o-linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
+    background-image: linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
+    pointer-events: none;
+}
+
+#starwartext p
+{
+    text-align: justify;
+    margin: 0.8em 0;
+    color: #FFFA00;
+    font-family: 'Droid Sans', sans-serif;
+}
+
+
+div#starwartextcontent
+{
+    position: absolute;
+    top: 35%;
+    -webkit-animation: scroll 100s linear 4s infinite;
+    -moz-animation: scroll 100s linear 4s infinite;
+    -ms-animation: scroll 100s linear 4s infinite;
+    -o-animation: scroll 100s linear 4s infinite;
+    animation: scroll 100s linear 4s infinite;
+}
+
+@-webkit-keyframes scroll {
+    0% { top: 35%; }
+    100% { top: -170%; }
+}
+
+@-moz-keyframes scroll {
+    0% { top: 35%; }
+    100% { top: -170%; }
+}
+
+@-ms-keyframes scroll {
+    0% { top: 35%; }
+    100% { top: -170%; }
+}
+
+@-o-keyframes scroll {
+    0% { top: 35%; }
+    100% { top: -170%; }
+}
+
+@keyframes scroll {
+    0% { top: 20%; }
+    100% { top: -170%; }
+}
+
+
+/* ##########################################
+            Mobile CSS
+########################################## */
+
+
+.burger_menu_button {
+    display:none;
+}
+
+@media screen and (max-width: 700px){
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .navbutton ul > li {
+        border-left: 1px solid #3C3C3C;
+        border-right: 1px solid #3C3C3C;
+        border-bottom: 1px solid #3C3C3C;
+        width: 250px;
+        display: block;
+        background-color: #0E0E0E;
+        position: relative;
+        left:-252px;
+    }
+
+    .navbutton ul {
+        margin: 0;
+        border-right: 0px solid #3C3C3C;
+        display: block;
+    }
+
+    .burger_menu_button {
+        background-image: url('../images/burger-menu.png');
+        background-size: 40px;
+        width: 250px;
+        height: 61px;
+        background-repeat: no-repeat;
+        display: block;
+        top: 15px;
+        left: 15px;
+        position: relative;
+    }
+
+/*    .navbutton ul:before {
+        content: "";
+        background-image: url('../images/burger-menu.png');
+        background-size: 40px;
+        width: 250px;
+        height: 61px;
+        background-repeat: no-repeat;
+        display: block;
+        top: 15px;
+        left: 15px;
+        position: relative;
+        }
+*/
+        .navbutton a {
+            display: block;
+            text-align: left;
+        }
+
+        .navbutton a > img {
+            display: inline-block;
+            height: 30px;
+            padding: 15px 40px;
+        }
+
+        .navbutton a > span {
+            display: inline-block;
+            position: relative;
+            top: -23px;
+        }
+
+        p#start {
+            font-size: 150%;
+            width: 40%;
+        }
+
+        #starwartext {
+            font-size: 100%;
+        }
+
+
+}
